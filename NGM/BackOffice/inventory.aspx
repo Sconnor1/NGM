@@ -20,7 +20,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_112307_ngmConnectionString %>" SelectCommand="SELECT [Deposit_ID], [Bank_ID], [Kiosk_ID], [Employee_ID], [Deposit_Date], [Deposit_Amount] FROM [Deposit]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_112307_ngmConnectionString %>" SelectCommand="Select [Product_ID], [Product_Description], [Product_Name], [Product_Price], [Product_Discount], [Product_Serial_No], [Category_ID] from [Products]"></asp:SqlDataSource>
      <section>
 		<div id="sectionHeader">Inventory</div>
          <div id="bank" class="sectionContent">
@@ -39,12 +39,13 @@
                 <EditRowStyle BackColor="#7C6F57" />
                 <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" Width="125px" />
                 <Fields>
-                    <asp:BoundField DataField="Deposit_ID"      HeaderText="Deposit ID" InsertVisible="False" ReadOnly="True" SortExpression="Deposit_ID" />
-                    <asp:BoundField DataField="Bank_ID"         HeaderText="Bank ID" ReadOnly="True" SortExpression="Bank_ID" />
-                    <asp:BoundField DataField="Kiosk_ID"        HeaderText="Kiosk ID" ReadOnly="True" SortExpression="Kiosk_ID" />
-                    <asp:BoundField DataField="Employee_ID"     HeaderText="Employee ID" ReadOnly="True" SortExpression="Employee_ID" />
-                    <asp:BoundField DataField="Deposit_Date"    HeaderText="Deposit Date" ReadOnly="True" SortExpression="Deposit_Date" />
-                    <asp:BoundField DataField="Deposit_Amount"  HeaderText="Deposit Amount" ReadOnly="True" SortExpression="Deposit_Amount" />
+                   <asp:BoundField DataField=" Product_ID " HeaderText=" Product ID " InsertVisible="False" ReadOnly="True" SortExpression=" Product_ID " />
+		   <asp:BoundField DataField="Product_Description" HeaderText=" Product Description " ReadOnly="True" SortExpression="Product_Description" />
+                   <asp:BoundField DataField=" Product_Name " HeaderText=" Product Name " ReadOnly="True" SortExpression=" Product_Name " />
+                   <asp:BoundField DataField=" Product_Price " HeaderText=" Product Price " ReadOnly="True" SortExpression=" Product_Price " />
+                   <asp:BoundField DataField=" Product_Discount " HeaderText=" Product Discount " ReadOnly="True" SortExpression=" Product_Discount " />
+                   <asp:BoundField DataField=" Product_Serial_No " HeaderText=" Serial_No " ReadOnly="True" SortExpression=" Product_Serial_No " />
+                   <asp:BoundField DataField=" Category_ID "  HeaderText=" Category ID " ReadOnly="True" SortExpression=" Category_ID " />
                 </Fields>
                 <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />
                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
